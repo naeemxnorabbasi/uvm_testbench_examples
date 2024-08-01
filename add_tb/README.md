@@ -19,6 +19,7 @@
 
 Run the following command:
 
+```sh
 cd add_tb/scripts
 source run_xsim.csh
 
