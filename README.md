@@ -33,5 +33,5 @@
 Run the following command:
 
 ```sh
-cd scripts
+cd <example>/scripts
 source run_xsim.csh
