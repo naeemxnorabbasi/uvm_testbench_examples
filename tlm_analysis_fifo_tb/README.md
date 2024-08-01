@@ -19,6 +19,7 @@
 
 Run the following command:
 
+```sh
 cd tlm_analysis_fifo_tb/scripts
 source run_xsim.csh
 

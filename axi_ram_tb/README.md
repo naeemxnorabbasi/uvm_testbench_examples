@@ -19,6 +19,7 @@
 
 Run the following command:
 
+```sh
 cd axi_ram_tb/scripts
 source run_xsim.csh
 

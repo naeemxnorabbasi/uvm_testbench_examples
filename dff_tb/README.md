@@ -19,6 +19,7 @@
 
 Run the following command:
 
+```sh
 cd dff_tb/scripts
 source run_xsim.csh
 

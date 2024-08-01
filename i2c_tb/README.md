@@ -15,11 +15,11 @@
 
 ## How to Compile and Run
 
-```sh
 ### Vivado
 
 Run the following command:
 
+```sh
 cd i2c_tb/scripts
 source run_xsim.csh
 

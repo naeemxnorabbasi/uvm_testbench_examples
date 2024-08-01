@@ -29,13 +29,9 @@
 
 ## How to Compile and Run
 
+### Vivado
+Run the following command:
+
 ```sh
 cd scripts
 source run_xsim.csh
-
-
-### Vivado
-
-Run the following command:
-
-./scripts/run_simulation_vivado.sh
