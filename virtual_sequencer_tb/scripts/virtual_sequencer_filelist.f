@@ -1,0 +1,17 @@
+../src/virtual_sequencer_if.sv
+../src/virtual_sequencer.sv
+../testbench/sequences/add_transaction.sv
+../testbench/sequences/mul_transaction.sv
+../testbench/drivers/add_driver.sv
+../testbench/drivers/mul_driver.sv
+../testbench/monitors/add_monitor.sv
+../testbench/monitors/mul_monitor.sv
+../testbench/agents/add_agent.sv
+../testbench/agents/mul_agent.sv
+../testbench/sequences/generator.sv
+../testbench/sequences/add_generator.sv
+../testbench/sequences/mul_generator.sv
+../testbench/scoreboards/scoreboard.sv
+../testbench/env/env.sv
+../testbench/tests/test.sv
+../src/virtual_sequencer_tb.sv
