@@ -15,6 +15,7 @@
 
 ## How to Compile and Run
 
+```sh
 ### Vivado
 
 Run the following command:

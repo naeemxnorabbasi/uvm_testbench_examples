@@ -38,5 +38,4 @@ source run_xsim.csh
 
 Run the following command:
 
-```sh
 ./scripts/run_simulation_vivado.sh
