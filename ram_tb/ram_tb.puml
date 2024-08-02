@@ -1,0 +1,70 @@
+@startuml
+package "RAM UVM Testbench Topology" {
+    class TEST {
+        ENV
+    }
+    class ENV {
+        AGENT
+        SCO
+    }
+    class AGENT {
+        DRV
+        MON
+        SEQ
+    }
+    class DRV {
+        +rsp_port: uvm_analysis_port
+        +seq_item_port: uvm_seq_item_pull_port
+    }
+    class MON {
+        +WRITE: uvm_analysis_port
+    }
+    class SEQ {
+        +rsp_export: uvm_analysis_export
+        +seq_item_export: uvm_seq_item_pull_imp
+        +arbitration_queue: array
+        +lock_queue: array
+        +num_last_reqs: integral
+        +num_last_rsps: integral
+    }
+    class SCO {
+        +READ: uvm_analysis_imp
+    }
+    class uvm_test_top {
+        ENV
+    }
+
+    TEST --|> ENV
+    ENV --|> AGENT
+    ENV --|> SCO
+    AGENT --|> DRV
+    AGENT --|> MON
+    AGENT --|> SEQ
+    DRV --|> rsp_port
+    DRV --|> seq_item_port
+    MON --|> WRITE
+    SEQ --|> rsp_export
+    SEQ --|> seq_item_export
+    SEQ --|> arbitration_queue
+    SEQ --|> lock_queue
+    SEQ --|> num_last_reqs
+    SEQ --|> num_last_rsps
+    SCO --|> READ
+    uvm_test_top --|> ENV
+    ENV --|> AGENT
+    ENV --|> SCO
+    AGENT --|> DRV
+    AGENT --|> MON
+    AGENT --|> SEQ
+    DRV --|> rsp_port
+    DRV --|> seq_item_port
+    MON --|> WRITE
+    SEQ --|> rsp_export
+    SEQ --|> seq_item_export
+    SEQ --|> arbitration_queue
+    SEQ --|> lock_queue
+    SEQ --|> num_last_reqs
+    SEQ --|> num_last_rsps
+    SCO --|> READ
+}
+@enduml

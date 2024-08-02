@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# xsim v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Aug  1 00:25:17 2024
+# Process ID: 224252
+# Current directory: /home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/scripts
+# Command line: xsim -mode tcl -source {xsim.dir/top/xsim_script.tcl}
+# Log file: /home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/scripts/xsim.log
+# Journal file: /home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/scripts/xsim.jou
+# Running On        :naeem-abbasi-To-Be-Filled-By-O-E-M
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04 LTS
+# Processor Detail  :Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz
+# CPU Frequency     :4400.013 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16731 MB
+# Swap memory       :4294 MB
+# Total Virtual     :21026 MB
+# Available Virtual :13259 MB
+#-----------------------------------------------------------
+source xsim.dir/top/xsim_script.tcl
+run -all

@@ -1,0 +1,19 @@
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab pipe_tb -relax -s top -timescale 1ns/1ps 
+Multi-threading is on. Using 6 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4468] File : /proj/xbuilds/SWIP/2024.1_0404_1523/installs/lin64/Vivado/2024.1/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv, Line : 25994, RANDC variable size more than 8 bits. This will be treated as a RAND variable instead.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package work.$unit_pipe_sv_1402455061
+Compiling package uvm.uvm_pkg
+Compiling package std.std
+Compiling module work.pipe_if_default
+Compiling module work.pipe
+Compiling module work.pipe_tb
+Built simulation snapshot top

@@ -1,0 +1,127 @@
+#-----------------------------------------------------------
+# xsim v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Aug  1 00:25:17 2024
+# Process ID: 224252
+# Current directory: /home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/scripts
+# Command line: xsim -mode tcl -source {xsim.dir/top/xsim_script.tcl}
+# Log file: /home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/scripts/xsim.log
+# Journal file: /home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/scripts/xsim.jou
+# Running On        :naeem-abbasi-To-Be-Filled-By-O-E-M
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04 LTS
+# Processor Detail  :Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz
+# CPU Frequency     :4400.013 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16731 MB
+# Swap memory       :4294 MB
+# Total Virtual     :21026 MB
+# Available Virtual :13259 MB
+#-----------------------------------------------------------
+source xsim.dir/top/xsim_script.tcl
+# xsim {top} -testplusarg UVM_TESTNAME=test -testplusarg UVM_VERBOSITY=UVM_LOW -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+UVM_INFO /tools/Xilinx/Vivado/2024.1/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO /tools/Xilinx/Vivado/2024.1/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18648) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_INFO @ 0: reporter [RNTST] Running test test...
+UVM_INFO /home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/testbench/env/pipe_env.sv(16) @ 0: uvm_test_top.env [uvm_test_top.env] Build stage complete.
+UVM_INFO /home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/testbench/drivers/pipe_driver.sv(18) @ 0: uvm_test_top.env.agent.driver [uvm_test_top.env.agent.driver] Build phase complete.
+UVM_INFO /home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/testbench/monitors/pipe_monitor.sv(23) @ 0: uvm_test_top.env.agent.monitor [pipe_monitor] INTERFACE USED = vif
+UVM_INFO /home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/testbench/monitors/pipe_monitor.sv(31) @ 0: uvm_test_top.env.agent.monitor [uvm_test_top.env.agent.monitor] Build stage complete.
+UVM_INFO /home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/testbench/agents/pipe_agent.sv(32) @ 0: uvm_test_top.env.agent [uvm_test_top.env.agent] Connect stage complete.
+UVM_INFO /home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/testbench/tests/pipe_test.sv(23) @ 0: uvm_test_top [test] printing the test topolgy:
+----------------------------------------------------------------------
+Name                         Type                     Size  Value     
+----------------------------------------------------------------------
+uvm_test_top                 test                     -     @346      
+  env                        pipe_env                 -     @359      
+    agent                    pipe_agent               -     @368      
+      driver                 pipe_driver              -     @518      
+        rsp_port             uvm_analysis_port        -     @537      
+        seq_item_port        uvm_seq_item_pull_port   -     @527      
+      monitor                pipe_monitor             -     @547      
+        item_collected_port  uvm_analysis_port        -     @563      
+      sequencer              pipe_sequencer           -     @381      
+        rsp_export           uvm_analysis_export      -     @390      
+        seq_item_export      uvm_seq_item_pull_imp    -     @508      
+        arbitration_queue    array                    0     -         
+        lock_queue           array                    0     -         
+        num_last_reqs        integral                 32    'd1       
+        num_last_rsps        integral                 32    'd1       
+      is_active              uvm_active_passive_enum  1     UVM_ACTIVE
+----------------------------------------------------------------------
+
+UVM_INFO /tools/Xilinx/Vivado/2024.1/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+UVM_INFO /tools/Xilinx/Vivado/2024.1/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18752) @ 0: reporter [UVMTOP] UVM testbench topology:
+----------------------------------------------------------------------
+Name                         Type                     Size  Value     
+----------------------------------------------------------------------
+uvm_test_top                 test                     -     @346      
+  env                        pipe_env                 -     @359      
+    agent                    pipe_agent               -     @368      
+      driver                 pipe_driver              -     @518      
+        rsp_port             uvm_analysis_port        -     @537      
+        seq_item_port        uvm_seq_item_pull_port   -     @527      
+      monitor                pipe_monitor             -     @547      
+        item_collected_port  uvm_analysis_port        -     @563      
+      sequencer              pipe_sequencer           -     @381      
+        rsp_export           uvm_analysis_export      -     @390      
+        seq_item_export      uvm_seq_item_pull_imp    -     @508      
+        arbitration_queue    array                    0     -         
+        lock_queue           array                    0     -         
+        num_last_reqs        integral                 32    'd1       
+        num_last_rsps        integral                 32    'd1       
+      is_active              uvm_active_passive_enum  1     UVM_ACTIVE
+----------------------------------------------------------------------
+
+UVM_INFO /tools/Xilinx/Vivado/2024.1/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(19968) @ 150000000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/testbench/monitors/pipe_monitor.sv(55) @ 150000000: uvm_test_top.env.agent.monitor [pipe_monitor] REPORT: COLLECTED PACKETS: 0
+UVM_INFO /tools/Xilinx/Vivado/2024.1/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(13673) @ 150000000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   13
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[NO_DPI_TSTNAME]     1
+[RNTST]     1
+[TEST_DONE]     1
+[UVM/COMP/NAMECHECK]     1
+[UVM/RELNOTES]     1
+[UVMTOP]     1
+[pipe_monitor]     2
+[test]     1
+[uvm_test_top.env]     1
+[uvm_test_top.env.agent]     1
+[uvm_test_top.env.agent.driver]     1
+[uvm_test_top.env.agent.monitor]     1
+
+WARNING: The Functional Coverage Database has not been updated during simulation. Please recheck testbench to confirm that covergroups are being instantiated correctly and rerun simulation.
+$finish called at time : 150 us : File "/tools/Xilinx/Vivado/2024.1/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+exit
+INFO: [Common 17-206] Exiting xsim at Thu Aug  1 00:25:20 2024...

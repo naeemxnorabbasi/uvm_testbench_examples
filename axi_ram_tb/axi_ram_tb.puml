@@ -1,0 +1,42 @@
+@startuml
+package "AXI RAM UVM Testbench Topology" {
+    class uvm_test_top {
+        env
+    }
+    class env {
+        a
+    }
+    class a {
+        d
+        m
+        seqr
+    }
+    class d {
+        +rsp_port: uvm_analysis_port
+        +seq_item_port: uvm_seq_item_pull_port
+    }
+    class m {}
+    class seqr {
+        +rsp_export: uvm_analysis_export
+        +seq_item_export: uvm_seq_item_pull_imp
+        +arbitration_queue: array
+        +lock_queue: array
+        +num_last_reqs: integral
+        +num_last_rsps: integral
+    }
+
+    uvm_test_top --|> env
+    env --|> a
+    a --|> d
+    a --|> m
+    a --|> seqr
+    d --|> rsp_port
+    d --|> seq_item_port
+    seqr --|> rsp_export
+    seqr --|> seq_item_export
+    seqr --|> arbitration_queue
+    seqr --|> lock_queue
+    seqr --|> num_last_reqs
+    seqr --|> num_last_rsps
+}
+@enduml

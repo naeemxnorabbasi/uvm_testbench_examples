@@ -1,0 +1,54 @@
+module pipe (clk, 
+	     rst_n, 
+	     i_cf, 
+	     i_en, 
+	     i_data0, 
+	     i_data1, 
+	     o_data0, 
+	     o_data1
+	     );
+
+   input logic clk;
+   input logic rst_n;
+   input logic [1:0] i_cf;
+   input logic i_en;
+   input logic [15:0] i_data0;
+   input logic [15:0] i_data1;
+
+   output logic [15:0] o_data0;
+   output logic [15:0] o_data1;
+
+   logic [15:0]	       data_0;
+   logic [15:0]	       data_1;
+   
+   
+   // input data and check to see if it is
+   // 16'h0000 or 16'hFFFF
+   // if not, multiply by correction factor
+
+   always @(posedge clk) begin
+      if(rst_n) begin
+	 data_0 <= 16'h0000;
+	 data_1 <= 16'h000;
+      end else begin
+	 if( (i_data0 == 16'h0000) ||(i_data0 == 16'hFFFF) ) begin
+	    data_0 <= i_data0;
+	 end else begin
+	    data_0 <= i_data0 * i_cf;
+	 end
+	 if( (i_data1 == 16'h0000) ||(i_data1 == 16'hFFFF) ) begin
+	    data_1 <= i_data1;
+	 end else begin
+	    data_1 <= i_data1 * i_cf;
+	 end	 
+      end
+   end // always @ (posedge clk)
+
+   always @(posedge clk) begin
+      o_data0 <= data_0;
+      o_data1 <= data_1;
+   end
+ 
+endmodule // pipe
+
+

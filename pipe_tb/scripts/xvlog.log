@@ -1,0 +1,15 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/src/pipe.sv" into library work
+INFO: [VRFC 10-311] analyzing module pipe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/src/pipe_if.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/testbench/drivers/data_packet.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/testbench/drivers/pipe_driver.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/testbench/sequences/pipe_sequence_lib.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/testbench/sequences/pipe_sequencer.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/testbench/monitors/pipe_monitor.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/testbench/agents/pipe_agent.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/testbench/env/pipe_env.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/testbench/scoreboards/pipe_scoreboard.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/testbench/coverage/pipe_coverage.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/testbench/tests/pipe_test.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/naeem-abbasi/Downloads/progs/source_code/pipe_tb/src/pipe_tb.sv" into library work
+INFO: [VRFC 10-311] analyzing module pipe_tb

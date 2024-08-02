@@ -1,0 +1,83 @@
+@startuml
+package "TLM Analysis FIFO example UVM Testbench Topology" {
+    class uvm_test_top {
+        env
+    }
+    class env {
+        agent
+        sco
+    }
+    class agent {
+        d
+        m
+        mref
+        seqr
+    }
+    class d {
+        +rsp_port: uvm_analysis_port
+        +seq_item_port: uvm_seq_item_pull_port
+    }
+    class m {
+        +send: uvm_analysis_port
+    }
+    class mref {
+        +send_ref: uvm_analysis_port
+    }
+    class seqr {
+        +rsp_export: uvm_analysis_export
+        +seq_item_export: uvm_seq_item_pull_imp
+        +arbitration_queue: array
+        +lock_queue: array
+        +num_last_reqs: integral
+        +num_last_rsps: integral
+    }
+    class sco {
+        sco_data
+        sco_data_ref
+    }
+    class sco_data {
+        +analysis_export: uvm_analysis_imp
+        +get_ap: uvm_analysis_port
+        +get_peek_export: uvm_get_peek_imp
+        +put_ap: uvm_analysis_port
+        +put_export: uvm_put_imp
+    }
+    class sco_data_ref {
+        +analysis_export: uvm_analysis_imp
+        +get_ap: uvm_analysis_port
+        +get_peek_export: uvm_get_peek_imp
+        +put_ap: uvm_analysis_port
+        +put_export: uvm_put_imp
+    }
+
+    uvm_test_top --|> env
+    env --|> agent
+    env --|> sco
+    agent --|> d
+    agent --|> m
+    agent --|> mref
+    agent --|> seqr
+    d --|> rsp_port
+    d --|> seq_item_port
+    m --|> send
+    mref --|> send_ref
+    seqr --|> rsp_export
+    seqr --|> seq_item_export
+    seqr --|> arbitration_queue
+    seqr --|> lock_queue
+    seqr --|> num_last_reqs
+    seqr --|> num_last_rsps
+    sco --|> sco_data
+    sco --|> sco_data_ref
+    sco_data --|> analysis_export
+    sco_data --|> get_ap
+    sco_data --|> get_peek_export
+    sco_data --|> put_ap
+    sco_data --|> put_export
+    sco_data_ref --|> analysis_export
+    sco_data_ref --|> get_ap
+    sco_data_ref --|> get_peek_export
+    sco_data_ref --|> put_ap
+    sco_data_ref --|> put_export
+}
+@enduml

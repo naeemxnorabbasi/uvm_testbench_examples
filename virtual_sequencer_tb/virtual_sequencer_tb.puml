@@ -1,0 +1,93 @@
+@startuml
+package "Virtual Sequencer example UVM Testbench Topology" {
+    class uvm_test_top {
+        env
+    }
+    class env {
+        aa
+        ma
+        s
+        vseqr
+    }
+    class aa {
+        a_seqr
+        d
+        m
+    }
+    class a_seqr {
+        +rsp_export: uvm_analysis_export
+        +seq_item_export: uvm_seq_item_pull_imp
+        +arbitration_queue: array
+        +lock_queue: array
+        +num_last_reqs: integral
+        +num_last_rsps: integral
+    }
+    class d {
+        +rsp_port: uvm_analysis_port
+        +seq_item_port: uvm_seq_item_pull_port
+    }
+    class m {
+        +send: uvm_analysis_port
+    }
+    class ma {
+        d
+        m
+        m_seqr
+    }
+    class m_seqr {
+        +rsp_export: uvm_analysis_export
+        +seq_item_export: uvm_seq_item_pull_imp
+        +arbitration_queue: array
+        +lock_queue: array
+        +num_last_reqs: integral
+        +num_last_rsps: integral
+    }
+    class s {
+        +recva: uvm_analysis_imp_add
+        +recvm: uvm_analysis_imp_mul
+    }
+    class vseqr {
+        +rsp_export: uvm_analysis_export
+        +seq_item_export: uvm_seq_item_pull_imp
+        +arbitration_queue: array
+        +lock_queue: array
+        +num_last_reqs: integral
+        +num_last_rsps: integral
+    }
+
+    uvm_test_top --|> env
+    env --|> aa
+    env --|> ma
+    env --|> s
+    env --|> vseqr
+    aa --|> a_seqr
+    aa --|> d
+    aa --|> m
+    a_seqr --|> rsp_export
+    a_seqr --|> seq_item_export
+    a_seqr --|> arbitration_queue
+    a_seqr --|> lock_queue
+    a_seqr --|> num_last_reqs
+    a_seqr --|> num_last_rsps
+    d --|> rsp_port
+    d --|> seq_item_port
+    m --|> send
+    ma --|> d
+    ma --|> m
+    ma --|> m_seqr
+    m_seqr --|> rsp_export
+    m_seqr --|> seq_item_export
+    m_seqr --|> arbitration_queue
+    m_seqr --|> lock_queue
+    m_seqr --|> num_last_reqs
+    m_seqr --|> num_last_rsps
+    s --|> recva
+    s --|> recvm
+    vseqr --|> rsp_export
+    vseqr --|> seq_item_export
+    vseqr --|> arbitration_queue
+    vseqr --|> lock_queue
+    vseqr --|> num_last_reqs
+    vseqr --|> num_last_rsps
+}
+@enduml
